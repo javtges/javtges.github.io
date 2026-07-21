@@ -1,32 +1,25 @@
 ---
 layout: page
 title: Robotic Pancake Chef
-description: ROS, Python, OpenCV, and MoveIt powering a robot arm that cooks pancakes
-img: assets/img/projects/pancakerobot/logo.png
+description: ROS, Python, OpenCV, MoveIt
+img: assets/img/projects/redpineapple/logo.png
 importance: 1
 category: work
 related_publications: false
 ---
 
-Robot pancake chef!!!
-
-This project uses ROS, computer vision, and robotic manipulation to control a robot arm that pours, flips, and plates pancakes.
-
-**Technologies:** ROS, Python, OpenCV, MoveIt
+<p>Robot pancake chef!!!</p>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/pancakerobot/devices.jpg" title="Robotic pancake chef" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/redpineapple/devices.jpg" title="Red Pineapple website on tablet, mobile and desktop" alt="Red Pineapple website on tablet, mobile and desktop" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/pancakerobot/desktop.jpg" title="Robotic pancake chef" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/redpineapple/desktop.jpg" title="Red Pineapple website on a desktop device" alt="Red Pineapple website on a desktop device" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/pancakerobot/mobile.jpg" title="Robotic pancake chef" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/redpineapple/mobile.jpg" title="Red Pineapple website on a mobile device" alt="Red Pineapple website on a mobile device" class="img-fluid rounded z-depth-1" %}
     </div>
-</div>
-<div class="caption">
-    Placeholder images carried over from the site's previous template &mdash; swap in real project photos here.
 </div>
 
-Read more and see the code on <a href="https://github.com/javtges/robot-pancake-chef" target="_blank" rel="nofollow">GitHub</a>.
+Code: <a href="https://github.com/javtges/robot-pancake-chef" target="_blank" rel="nofollow">GitHub</a>
