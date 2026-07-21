@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> 2015 | James Avtges </title> <meta name="author" content="James Avtges"> <meta name="description" content="James Avtges Portfolio "> <meta name="keywords" content="Pineapple, Pineapple Pizza, Pineapple House, Robotics, Portfolio"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> 2015 | James Avtges </title> <meta name="author" content="James Avtges"> <meta name="description" content="Roboticist, Maker, M.S. in Robotics and current Ph.D. student at Northwestern University. My work focuses on robot learning for soft robots! "> <meta name="keywords" content="ROS, Robotics, Perception"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
   :root {
     --max-content-width: 930px;
   }
@@ -38,7 +38,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "A growing collection of my robotics research, coursework, and other projects.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -420,16 +420,51 @@ ninja.data = [{
           section: "News",},{id: "news-migrated-the-site-to-the-al-folio-jekyll-theme-tada",
           title: 'Migrated the site to the al-folio Jekyll theme. <img class="emoji" title=":tada:" alt=":tada:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" height="20" width="20">',
           description: "",
-          section: "News",},{id: "projects-robotic-pancake-chef",
-          title: 'Robotic Pancake Chef',
-          description: "ROS, Python, OpenCV, MoveIt",
+          section: "News",},{id: "projects-reinforcement-learning-for-soft-robots",
+          title: 'Reinforcement Learning for Soft Robots',
+          description: "Soft Robotics, Reinforcement Learning",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_pancakerobot/";
+              window.location.href = "/projects/1_softquadruped/";
+            },},{id: "projects-bringing-robotics-to-the-public",
+          title: 'Bringing Robotics to the Public',
+          description: "Outreach, ROS, Demonstrations",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_outreach/";
+            },},{id: "projects-extended-kalman-filter-slam-from-scratch",
+          title: 'Extended Kalman Filter SLAM from Scratch',
+          description: "C++, ROS, SLAM, State Estimation, Gaussian Regression",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_ekfslam/";
+            },},{id: "projects-tactile-texture-classification",
+          title: 'Tactile Texture Classification',
+          description: "Tactile Sensing, Machine Learning, Python, Research",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_textureclassification/";
+            },},{id: "projects-deep-learning-for-gesture-recognition",
+          title: 'Deep Learning for Gesture Recognition',
+          description: "Deep Learning, Computer Vision, Python, Pytorch, Tensorflow",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_gesturerecognition/";
+            },},{id: "projects-robotic-pancake-chef",
+          title: 'Robotic Pancake Chef',
+          description: "ROS, Python, OpenCV, MoveIt, Manipulation",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_pancakerobot/";
+            },},{id: "projects-robotic-desk-assistant",
+          title: 'Robotic Desk Assistant',
+          description: "Computer Vision, ROS, Python, MoveIt, OpenCV",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_robotassistant/";
+            },},{id: "projects-soil-saturation-controller",
+          title: 'Soil Saturation Controller',
+          description: "Python, OpenCV, Earthquake Simulation",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_soilresearch/";
             },},{id: "projects-red-pineapple",
           title: 'Red Pineapple',
           description: "HTML, CSS, Boostrap, Sass, JavaScript, jQuery, Jekyll",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_redpineapple/";
+              window.location.href = "/projects/9_redpineapple/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
@@ -441,11 +476,18 @@ ninja.data = [{
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/introduction-to-machine-learning/";
             },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://drive.google.com/file/d/1dCCWKBgOmdYBIXdu2y2olhF5vBZs0V0l/view?usp=sharing", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6A%70%61%76%74%67%65%73%34%38@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("mailto:%6A%61%6D%65%73%61%76%74%67%65%73%32%30%32%32@%75.%6E%6F%72%74%68%77%65%73%74%65%72%6E.%65%64%75", "_blank");
         },
       },{
         id: 'social-rss',
@@ -466,7 +508,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/", "_blank");
+          window.open("https://www.linkedin.com/in/james-avtges", "_blank");
         },
       },{
       id: 'light-theme',

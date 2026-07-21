@@ -1,10 +1,10 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Robotic Pancake Chef | James Avtges </title> <meta name="author" content="James Avtges"> <meta name="description" content="ROS, Python, OpenCV, MoveIt"> <meta name="keywords" content="Pineapple, Pineapple Pizza, Pineapple House, Robotics, Portfolio"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Extended Kalman Filter SLAM from Scratch | James Avtges </title> <meta name="author" content="James Avtges"> <meta name="description" content="C++, ROS, SLAM, State Estimation, Gaussian Regression"> <meta name="keywords" content="ROS, Robotics, Perception"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
   :root {
     --max-content-width: 930px;
   }
-</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%8D%8D&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://javtges.github.io/projects/1_pancakerobot/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%8D%8D&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://javtges.github.io/projects/3_ekfslam/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">James</span> Avtges </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Robotic Pancake Chef</h1> <p class="post-description">ROS, Python, OpenCV, MoveIt</p> </header> <article> <p>Robot pancake chef!!!</p> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/redpineapple/devices-480.webp 480w,/assets/img/projects/redpineapple/devices-800.webp 800w,/assets/img/projects/redpineapple/devices-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/redpineapple/devices.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" alt="Red Pineapple website on tablet, mobile and desktop" title="Red Pineapple website on tablet, mobile and desktop" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/redpineapple/desktop-480.webp 480w,/assets/img/projects/redpineapple/desktop-800.webp 800w,/assets/img/projects/redpineapple/desktop-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/redpineapple/desktop.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" alt="Red Pineapple website on a desktop device" title="Red Pineapple website on a desktop device" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/redpineapple/mobile-480.webp 480w,/assets/img/projects/redpineapple/mobile-800.webp 800w,/assets/img/projects/redpineapple/mobile-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/projects/redpineapple/mobile.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" alt="Red Pineapple website on a mobile device" title="Red Pineapple website on a mobile device" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <p>Code: <a href="https://github.com/javtges/robot-pancake-chef" target="_blank" rel="nofollow">GitHub</a></p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 James Avtges. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">James</span> Avtges </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Extended Kalman Filter SLAM from Scratch</h1> <p class="post-description">C++, ROS, SLAM, State Estimation, Gaussian Regression</p> </header> <article> <figure> <iframe src="https://www.youtube.com/embed/o4k6hs_qkiI" class="img-fluid rounded z-depth-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" width="auto" height="auto"></iframe> </figure> <p>This is an implementation of Extended Kalman Filter (EKF) SLAM from scratch, in C++. The SLAM pipeline is implemented as a series of ROS packages, and can be simulated in Rviz as well as run on a Turtlebot3, using the onboard LiDAR. <br><br></p> <p>This project implements the differential drive forward and inverse kinematics that allow the turtlebot to move. Visualization for simulation was done in Rviz, which contains a world with cylindrical obstacles for the turtlebot to detect. All parameters that govern the obstacles and the robot can be edited as ROS parameters. <br><br></p> <p>The SLAM pipeline begins by clustering LiDAR distance data by distance. The points in the clusters are then fit to a circle, in order to find the cylindrical obstacles in the scene. The algorithm that performs this is a form of <a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-3/issue-none/Error-analysis-for-circle-fitting-algorithms/10.1214/09-EJS419.full" target="_blank" rel="external nofollow noopener"><u>Gaussian process regression</u></a> which finds the best fitting circle for the cluster. The location and radius of the circle are then used to classify it appropriately into an “obstacle” or “not obstacle” class. <br><br></p> <p>Data association then performed, using the mahalanobis distance from previously discovered obstacles to determine if the measurement should be associated with a previous item in the Kalman Filter, or if it should be considered as a new measurement. Finally, the Extended Kalman Filter uses the turtlebot velocity to predict the future state, and then update the Kalman gains, covariance matrix, and state vector accordingly. <br><br></p> <p>When noise is added to LiDAR data wheel velocity, and wheel slip is considered, the EKF SLAM algorithm maintains a better estimate of the robot’s state than odometry alone. In the video above, the green robot represents the SLAM’s estimate, the blue the odometry, and the red the actual position.<br><br></p> <p>More information and source code can be found on the project’s <a href="https://github.com/javtges/turtlebot-ekf-slam" target="_blank" rel="external nofollow noopener"><u>GitHub repository</u></a>.</p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 James Avtges. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
@@ -38,7 +38,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "A growing collection of my robotics research, coursework, and other projects.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -420,16 +420,51 @@ ninja.data = [{
           section: "News",},{id: "news-migrated-the-site-to-the-al-folio-jekyll-theme-tada",
           title: 'Migrated the site to the al-folio Jekyll theme. <img class="emoji" title=":tada:" alt=":tada:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" height="20" width="20">',
           description: "",
-          section: "News",},{id: "projects-robotic-pancake-chef",
-          title: 'Robotic Pancake Chef',
-          description: "ROS, Python, OpenCV, MoveIt",
+          section: "News",},{id: "projects-reinforcement-learning-for-soft-robots",
+          title: 'Reinforcement Learning for Soft Robots',
+          description: "Soft Robotics, Reinforcement Learning",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_pancakerobot/";
+              window.location.href = "/projects/1_softquadruped/";
+            },},{id: "projects-bringing-robotics-to-the-public",
+          title: 'Bringing Robotics to the Public',
+          description: "Outreach, ROS, Demonstrations",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_outreach/";
+            },},{id: "projects-extended-kalman-filter-slam-from-scratch",
+          title: 'Extended Kalman Filter SLAM from Scratch',
+          description: "C++, ROS, SLAM, State Estimation, Gaussian Regression",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_ekfslam/";
+            },},{id: "projects-tactile-texture-classification",
+          title: 'Tactile Texture Classification',
+          description: "Tactile Sensing, Machine Learning, Python, Research",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_textureclassification/";
+            },},{id: "projects-deep-learning-for-gesture-recognition",
+          title: 'Deep Learning for Gesture Recognition',
+          description: "Deep Learning, Computer Vision, Python, Pytorch, Tensorflow",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_gesturerecognition/";
+            },},{id: "projects-robotic-pancake-chef",
+          title: 'Robotic Pancake Chef',
+          description: "ROS, Python, OpenCV, MoveIt, Manipulation",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_pancakerobot/";
+            },},{id: "projects-robotic-desk-assistant",
+          title: 'Robotic Desk Assistant',
+          description: "Computer Vision, ROS, Python, MoveIt, OpenCV",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_robotassistant/";
+            },},{id: "projects-soil-saturation-controller",
+          title: 'Soil Saturation Controller',
+          description: "Python, OpenCV, Earthquake Simulation",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_soilresearch/";
             },},{id: "projects-red-pineapple",
           title: 'Red Pineapple',
           description: "HTML, CSS, Boostrap, Sass, JavaScript, jQuery, Jekyll",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_redpineapple/";
+              window.location.href = "/projects/9_redpineapple/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
@@ -441,11 +476,18 @@ ninja.data = [{
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/introduction-to-machine-learning/";
             },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://drive.google.com/file/d/1dCCWKBgOmdYBIXdu2y2olhF5vBZs0V0l/view?usp=sharing", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6A%70%61%76%74%67%65%73%34%38@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("mailto:%6A%61%6D%65%73%61%76%74%67%65%73%32%30%32%32@%75.%6E%6F%72%74%68%77%65%73%74%65%72%6E.%65%64%75", "_blank");
         },
       },{
         id: 'social-rss',
@@ -466,7 +508,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/", "_blank");
+          window.open("https://www.linkedin.com/in/james-avtges", "_blank");
         },
       },{
       id: 'light-theme',
