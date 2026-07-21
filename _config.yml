@@ -238,6 +238,7 @@ exclude:
   - gems/
   - migrations/
   - vendor
+  - legacy-pineapple-template/
 keep_files:
   - CNAME
   - .nojekyll
