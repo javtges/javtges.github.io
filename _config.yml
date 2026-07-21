@@ -228,6 +228,7 @@ exclude:
   - Gemfile.lock
   - INSTALL.md
   - LICENSE
+  - legacy-pineapple-template/
   - lighthouse_results/
   - package.json
   - package-lock.json
