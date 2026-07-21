@@ -233,3 +233,19 @@
     color: #38a169; // projects
   }
 }
+
+// Match the "active" (currently selected page) color to the same
+// per-link hover color above, instead of the shared --global-theme-color.
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  &[href="/"] {
+    color: #2b6cb0; // about
+  }
+
+  &[href="/publications/"] {
+    color: #b83280; // publications
+  }
+
+  &[href="/projects/"] {
+    color: #38a169; // projects
+  }
+}
