@@ -1,115 +1,76 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title     = {Relativity: the Special and General Theory},
-  author    = {Einstein, Albert},
-  year      = {1920},
-  publisher = {Methuen & Co Ltd},
-  html      = {relativity.html}
+@inproceedings{avtges2026damage,
+  abbr        = {RSS},
+  bibtex_show = {true},
+  title       = {Damage Adaptation in Seconds for Architected Materials},
+  author      = {Avtges, James and Ketchum, Jake and Young, Helena and Kim, Taekyoung and Truby, Ryan and Murphey, Todd},
+  booktitle   = {Proceedings of Robotics: Science and Systems},
+  year        = {2026},
+  abstract    = {Adaptation to damages and in-situ physical repairs is essential for long-term robot autonomy, yet challenging outside of narrowly defined and well-anticipated bounds. In this work we proprioceptively adapt to catastrophic damage in soft-actuated systems in under one minute. Architected materials are well equipped for adaptation: actuator failure occurs gradually rather than acutely, and damage can be described in a low-dimensional, discrete coordinate space. Surprisingly, latent damage representations plus a simple yet robust ensemble method is sufficient for adapting to unseen damage in real-time. Moreover, we identify conditions under which exponential sample complexity collapses to linear sample complexity for learned representations of architected materials, a concrete advantage over rigid components or continuum soft mechanisms. We demonstrate LEAP, our method for adaptive proprioception, via a tracing task for a 6DoF soft wrist based on Handed Shearing Auxetic (HSA) actuators. Our algorithm is able to adapt to cuts, burns, and actuator repairs, enabling simulation-free real-time adaptation that is critical for realizing the promise of soft robots outside the lab. Videos and more information are available at https://murpheylab.github.io/leap.},
+  arxiv       = {2606.17394},
+  preview     = {avtges2026damage.jpg},
+  selected    = {true}
 }
 
-@book{einstein1956investigations,
+@inproceedings{avtges2025realtime,
+  abbr        = {IROS},
   bibtex_show = {true},
-  title       = {Investigations on the Theory of the Brownian Movement},
-  author      = {Einstein, Albert},
-  year        = {1956},
-  publisher   = {Courier Corporation},
-  preview     = {brownian-motion.gif}
+  title       = {Real-Time Reinforcement Learning for Dynamic Tasks with a Parallel Soft Robot},
+  author      = {Avtges, James and Ketchum, Jake and Schlafly, Millicent and Young, Helena and Kim, Taekyoung and Pinosky, Allison and Truby, Ryan L. and Murphey, Todd D.},
+  booktitle   = {2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year        = {2025},
+  pages       = {5537--5544},
+  publisher   = {IEEE},
+  abstract    = {Closed-loop control remains an open challenge in soft robotics. The nonlinear responses of soft actuators under dynamic loading conditions limit the use of analytic models for soft robot control. Traditional methods of controlling soft robots underutilize their configuration spaces to avoid nonlinearity, hysteresis, large deformations, and the risk of actuator damage. Furthermore, episodic data-driven control approaches such as reinforcement learning (RL) are traditionally limited by sample efficiency and inconsistency across initializations. In this work, we demonstrate RL for reliably learning control policies for dynamic balancing tasks in real-time single-shot hardware deployments. We use a deformable Stewart platform constructed using parallel, 3D-printed soft actuators based on motorized handed shearing auxetic (HSA) structures. By introducing a curriculum learning approach based on expanding neighborhoods…},
+  html        = {https://ieeexplore.ieee.org/abstract/document/11246440/},
+  preview     = {avtges2025realtime.jpg},
+  selected    = {true}
 }
 
-@article{einstein1950meaning,
-  abbr        = {AJP},
+@inproceedings{zhang2025sample,
+  abbr        = {CoRL},
   bibtex_show = {true},
-  title       = {The meaning of relativity},
-  author      = {Einstein, Albert and Taub, AH},
-  journal     = {American Journal of Physics},
+  title       = {Sample-Efficient Online Control Policy Learning with Real-Time Recursive Model Updates},
+  author      = {Zhang, Zixin and Avtges, James and Murphey, Todd D.},
+  booktitle   = {Conference on Robot Learning},
+  year        = {2025},
+  pages       = {1914--1939},
+  abstract    = {Data-driven control methods need to be sample-efficient and lightweight, especially when data acquisition and computational resources are limited -- such as during learning on hardware. Most modern data-driven methods require large datasets and struggle with real-time updates of models, limiting their performance in dynamic environments. Koopman theory formally represents nonlinear systems as linear models over observables, and Koopman representations can be determined from data in an optimization-friendly setting with potentially rapid model updates. In this paper, we present a highly sample-efficient, Koopman-based learning pipeline: Recursive Koopman Learning (RKL). We identify sufficient conditions for model convergence and provide formal algorithmic analysis supporting our claim that RKL is lightweight and fast, with complexity independent of dataset size. We validate our method on a simulated planar two-link arm and a hybrid nonlinear hardware system with soft actuators, showing that real-time recursive Koopman model updates improve the sample efficiency and stability of data-driven controller synthesis -- requiring only <10% of the data compared to benchmarks. The high-performance C++ codebase is open-sourced. Website: https://www.zixinatom990.com/home/robotics/corl-2025-recursive-koopman-learning.},
+  arxiv       = {2509.08241},
+  preview     = {zhang2025sample.jpg},
+  selected    = {true}
+}
+
+@inproceedings{ketchum2025force,
+  abbr        = {RoboSoft},
+  bibtex_show = {true},
+  title       = {Force and Speed in a Soft Stewart Platform},
+  author      = {Ketchum, Jake and Avtges, James and Schlafly, Millicent and Young, Helena and Kim, Taekyoung and Truby, Ryan L. and Murphey, Todd D.},
+  booktitle   = {2025 IEEE 8th International Conference on Soft Robotics (RoboSoft)},
+  year        = {2025},
+  pages       = {1--8},
+  publisher   = {IEEE},
+  abstract    = {Many soft robots struggle to produce dynamic motions with fast, large displacements. We develop a parallel 6 degree-of-freedom (DoF) Stewart-Gough mechanism using Handed Shearing Auxetic (HSA) actuators. By using soft actuators, we are able to use one third as many mechatronic components as a rigid Stewart platform, while retaining a working payload of 2kg and an open-loop bandwidth greater than 16Hz. We show that the platform is capable of both precise tracing and dynamic disturbance rejection when controlling a ball and sliding puck using a Proportional Integral Derivative (PID) controller. We develop a machine-learning-based kinematics model and demonstrate a functional workspace of roughly 10cm in each translation direction and 28 degrees in each orientation. This 6DoF device has many of the characteristics associated with rigid components—power, speed, and total workspace— while…},
+  html        = {https://ieeexplore.ieee.org/abstract/document/11020875/},
+  preview     = {ketchum2025force.jpg},
+  selected    = {true}
+}
+
+@article{kaarthik2022motorized,
+  abbr        = {SM},
+  bibtex_show = {true},
+  title       = {Motorized, untethered soft robots via 3D printed auxetics},
+  author      = {Kaarthik, Pranav and Sanchez, Francesco L. and Avtges, James and Truby, Ryan L.},
+  journal     = {Soft Matter},
   volume      = {18},
-  number      = {6},
-  pages       = {403--404},
-  year        = {1950},
-  publisher   = {American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr              = {PhysRev},
-  title             = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author            = {Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract          = {In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal           = {Phys. Rev.},
-  location          = {New Jersey},
-  volume            = {47},
-  issue             = {10},
-  pages             = {777--780},
-  numpages          = {0},
-  year              = {1935},
-  month             = {May},
-  publisher         = aps,
-  doi               = {10.1103/PhysRev.47.777},
-  url               = {https://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html              = {https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf               = {example_pdf.pdf},
-  altmetric         = {248277},
-  dimensions        = {true},
-  google_scholar_id = {qyhmnyLat1gC},
-  video             = {https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info   = {. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation        = {* Example use of superscripts<br>† Albert Einstein},
-  selected          = {true},
-  inspirehep_id     = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title     = {{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author    = {Einstein, A.},
-  journal   = {Annalen der physik},
-  volume    = {322},
-  number    = {8},
-  pages     = {549--560},
-  year      = {1905},
-  publisher = {Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr    = {Ann. Phys.},
-  title   = {Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author  = {Einstein, A.},
-  journal = {Ann. Phys.},
-  volume  = {17},
-  pages   = {549--560},
-  year    = {1905}
-}
-
-@article{einstein1905electrodynamics,
-  title  = {On the electrodynamics of moving bodies},
-  author = {Einstein, A.},
-  year   = {1905}
-}
-
-@article{einstein1905photoelectriceffect,
-  bibtex_show = {true},
-  abbr        = {Ann. Phys.},
-  title       = {{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}},
-  author      = {Albert Einstein},
-  abstract    = {This is the abstract text.},
-  journal     = {Ann. Phys.},
-  volume      = {322},
-  number      = {6},
-  pages       = {132--148},
-  year        = {1905},
-  doi         = {10.1002/andp.19053220607},
-  award       = {Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name  = {Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show = {true},
-  title       = {Letters on wave mechanics},
-  author      = {Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year        = {1967},
-  publisher   = {Vision},
-  preview     = {wave-mechanics.gif},
-  abbr        = {Vision}
+  number      = {43},
+  pages       = {8229--8237},
+  year        = {2022},
+  publisher   = {The Royal Society of Chemistry},
+  abstract    = {Untethered operation remains a fundamental challenge in soft robotics. Soft robotic actuators are generally unable to produce the forces required for carrying essential power and control hardware on-board. Moreover, current untethered soft robots often have low operating times given soft actuators' limited efficiency and lifetime. Here, we 3D print cylindrical handed shearing auxetics (HSAs) from single-cure polyurethane resins for use as scalable, motorized soft robotic actuators for untethered machines. Mechanical characterization of individual HSAs confirms their auxetic behaviors and suitability as actuators. HSA pairs of opposite handedness are assembled to form multi-degree-of-freedom legs for untethered quadrupeds. We explore several leg designs to understand the role of length and auxetic pattern density on overall motion and blocked force generated. Finally, we demonstrate untethered locomotion with…},
+  html        = {https://pubs.rsc.org/sm/article-abstract/18/43/8229/788466},
+  preview     = {kaarthik2022motorized.jpg},
+  selected    = {true}
 }
