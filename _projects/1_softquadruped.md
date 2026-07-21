@@ -17,7 +17,7 @@ and <a href="https://robotics.northwestern.edu/people/profiles/faculty/elwin-mat
 <br>
 
 ![Soft Matter Cover](/assets/img/projects/final/hsa_robot_beach.png)
-<center><h2>Cover photo from a themed collection on soft robotics, <i>Soft Matter</i></h2></center>
+<div class="caption">Cover photo from a themed collection on soft robotics, <i>Soft Matter</i></div>
 
 
 <br>
@@ -33,8 +33,8 @@ We print HSAs out of polyurethane-like material, using stereolithography.</p>
 <p>An HSA is composed of two of these auxetic cylinders. When paired together, two HSA pairs can create a structure that can expand, contract, bend, and twist.</p>
 <br>
 
-<img class="img80" src="/assets/img/projects/final/hsa_robot_movements.png" width="1200">
-<center><h2>Kaarthik et al., "Motorized, untethered soft robots via 3D printed auxetics", <i>Soft Matter</i>, 2022.</h2></center>
+<img src="/assets/img/projects/final/hsa_robot_movements.png" width="1200">
+<div class="caption">Kaarthik et al., "Motorized, untethered soft robots via 3D printed auxetics", <i>Soft Matter</i>, 2022.</div>
 
 <p>I joined the Robotic Matter Lab when Pranav Kaarthik was working with HSAs to create an quadruped. Using a hand-defined gait, he demonstrated untethered locomotion for over an hour, while carrying a payload of 1.5kg.
   This work appeared in "Motorized, untethered soft robots via 3D printed auxetics", accepted to <i>Soft Matter</i> in the Fall, and was the cover art for a themed collection on soft robotics!
@@ -62,15 +62,15 @@ We print HSAs out of polyurethane-like material, using stereolithography.</p>
 <br>
 
 ![Peter Stone Block Diagram](/assets/img/projects/final/peterstone.png)
-<center><h2>Nate Kohl and Peter Stone, "Policy Gradient Reinforcement Learning for Fast Quadrupedal Locomotion", ICRA, 2004.</h2></center>
+<div class="caption">Nate Kohl and Peter Stone, "Policy Gradient Reinforcement Learning for Fast Quadrupedal Locomotion", ICRA, 2004.</div>
 
 <p>Here, I parameterized the values in the hand-tuned policy, while preserving the gait's structure. However, it was found that given the parameter space we were searching, the system was very brittle with respect to parameter
   perturbations. While it is certainly possible to have learned a more optimal gait using this method (<i>and should I have had more time, I would've loved to explore further!</i>), the timescales required (<i>and therefore the number of motors and HSAs printed</i>) was prohibitive. Thus, I led the initiative to pivot to a sim-to-real approach to learn gaits on this system.
 </p>
 <br>
 
-<img class="img80" src="/assets/img/projects/final/stone_results.png">
-<center><h2>Results on a per-trial basis, using online policy gradient RL</h2></center>
+<img src="/assets/img/projects/final/stone_results.png">
+<div class="caption">Results on a per-trial basis, using online policy gradient RL</div>
 <br>
 
 ### Creating a Simulation Environment
@@ -80,7 +80,7 @@ We print HSAs out of polyurethane-like material, using stereolithography.</p>
 <br>
 
 ![HSA Robot Moving in Pybullet](/assets/img/projects/final/hsa_pybullet_joints.gif)
-<center><h2>HSA Robot, in Pybullet, moving its joints around</h2></center>
+<div class="caption">HSA Robot, in Pybullet, moving its joints around</div>
 
 ### Policies Modulating Trajectory Generators
 
@@ -94,7 +94,7 @@ We print HSAs out of polyurethane-like material, using stereolithography.</p>
 </p>
 
 ![PMTG Block Diagram](/assets/img/projects/final/pmtg_block.png)
-<center><h2>Iscen et al., "Policies Modulating Trajectory Generators", Conference on Robot Learning (CoRL), 2018.</h2></center>
+<div class="caption">Iscen et al., "Policies Modulating Trajectory Generators", Conference on Robot Learning (CoRL), 2018.</div>
 
 
 <p>In order to improve the sim-to-real transfer effectiveness, I apply Gaussian noise to each set of simulation inputs, along with applying domain randomization for each rollout, increasing the robustness of the policy.
@@ -126,7 +126,7 @@ We print HSAs out of polyurethane-like material, using stereolithography.</p>
 <br>
 
 ![HSA Test Fixture](/assets/img/projects/final/hsa_cage.png)
-<center><h2>Test fixture for capturing HSA dynamics</h2></center>
+<div class="caption">Test fixture for capturing HSA dynamics</div>
 
 <p>Using an AprilTag, I then perform a set of planar sweeps to cover the parameter space for the leg. It results in a lookup table as shown below - each dot represents a combination of motor commands and the inplane displacement of the leg from the origin <code>(0,0)</code>, when the motors are at their neutral location. In the full lookup table, compiled over multiple hours and ~12 complete inplane sweeps covering the parameter space, it's visually apparent that <strong>1.</strong> the HSA properties remain reasonably consistent over time, and <strong>2.</strong> HSA displacement at a given set of motor values is reasonably
   repeatable, regardless of the actuator's strain rate or direction of movement. The resulting dimensions of the lookup table then define the joint limits in the simulation's URDF file.
@@ -135,14 +135,14 @@ We print HSAs out of polyurethane-like material, using stereolithography.</p>
 
 | Animated Lookup Table  | Full Lookup Table |
 | ------------- | ------------- |
-| <img class="img80" src="/assets/img/projects/final/lut_animation.gif">  | <img class="img80" src="/assets/img/projects/final/interpolate_lut.png">  |
+| <img src="/assets/img/projects/final/lut_animation.gif">  | <img src="/assets/img/projects/final/interpolate_lut.png">  |
 
 
 <p>Finally, I perform bilinear interpolation to go from an arbitrary set of XY values in the leg's coordinate frame, to a set of motor commands that most closely replicate it. Appending this to the end of the PMTG pipeline allows translation of simulated policies into real life.</p>
 <br>
 
 ![HSA Test Fixture](/assets/img/projects/final/full_diagram.png)
-<center><h2>The full system diagram for running a policy on a real robot</h2></center>
+<div class="caption">The full system diagram for running a policy on a real robot</div>
 
 <br>
 
@@ -154,11 +154,11 @@ We print HSAs out of polyurethane-like material, using stereolithography.</p>
 <br>
 
 ![HSA Robot Moving in Pybullet](/assets/img/projects/final/default_gait_slow.gif)
-<center><h2>Closed-loop circular gait in Pybullet</h2></center>
+<div class="caption">Closed-loop circular gait in Pybullet</div>
 
 
 ![HSA Robot Moving in Pybullet](/assets/img/projects/final/hsa_circle_gait.gif)
-<center><h2>Closed-loop circular gait in real life</h2></center>
+<div class="caption">Closed-loop circular gait in real life</div>
 
 
 <p> This is corroborated in the simulation results, where we can observe the robot learning significantly in only hundreds of rollouts, sometimes fewer. Initial results showed nearly 5x improvement in gait speed, largely
@@ -166,19 +166,19 @@ We print HSAs out of polyurethane-like material, using stereolithography.</p>
 </p>
 <br>
 
-<img class="img80" src="/assets/img/projects/final/hsa_fastwalk.gif">
-<center><h2>Time modulation allows quicker leg movements</h2></center>
+<img src="/assets/img/projects/final/hsa_fastwalk.gif">
+<div class="caption">Time modulation allows quicker leg movements</div>
 
 <p>However, this type of gait isn't reasonable to run on the real robot - the HSAs don't move this fast in real life. Therefore, current work focuses on slowing down gaits while still generating geometric optimization.
   An example is shown below in simulation, we we improve a slowed-down gait's speed (<i>that more closely resembles how the robot walks in real-life</i>) by a factor of three.</p>
 <br>
 
 ![Training Plot](/assets/img/projects/final/training.png)
-<center><h2>Plot of training rewards over rollout number</h2></center>
+<div class="caption">Plot of training rewards over rollout number</div>
 
 
 ![HSA Robot Moving in Pybullet](/assets/img/projects/final/hsa_slower_optgait.gif)
-<center><h2>Optimized Pybullet gait, ~3x faster than initial policy</h2></center>
+<div class="caption">Optimized Pybullet gait, ~3x faster than initial policy</div>
 
 <p>Final results, aiming to demonstrate a complete sim-to-real gait pipeline, are still in production with the intention of preparing a conference submission! An absolute massive thank-you to my advisors Ryan Truby
   and Matt Elwin, along with Pranav Kaarthik, Francesco Sanchez from the Robotic Matter Lab. From Todd Murphey's Lab, Jake Ketchum, Muchen Sun, and Thomas Berrueta were all great resources and collaborators!

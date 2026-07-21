@@ -22,7 +22,7 @@ related_publications: false
 <br>
 
 ![Flipping a pancake with chocolate chips](/assets/img/projects/pancake/IMG_6158.jpg)
-<center><h2>An overhead view of the workspace, tools, and AprilTags for object identification.</h2></center>
+<div class="caption">An overhead view of the workspace, tools, and AprilTags for object identification.</div>
 
 
 <p>Once the pancake is put onto the griddle, the perception pipeline aims to determine an appropriate time to flip the pancake much like a human would. By counting the contours on the griddle's surface, the program is able to determine the number of  bubbles that appear on the pancake's surface. Empirical testing shows that for the pancakes created by the squeeze bottle, the number of bubbles rises, plateaus, and declines around the right time to flip - when the robot then moves to pick up the spatula.</p>
@@ -35,7 +35,7 @@ related_publications: false
 <br>
 
 ![A finished pancake deposited onto a plate](/assets/img/projects/pancake/pancake_flip2.jpg)
-<center><h2>Finishing a pancake with chocolate chips!</h2></center>
+<div class="caption">Finishing a pancake with chocolate chips!</div>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

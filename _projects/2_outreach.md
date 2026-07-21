@@ -9,7 +9,7 @@ related_publications: false
 ---
 
 ![Best Friends with a Pancake Robot!](/assets/img/projects/outreach/robot_picture.jpg)
-<center><h2>Best Friends with a Robot!</h2></center>
+<div class="caption">Best Friends with a Robot!</div>
 
 <p>This spring, I had the privilege to perform some outreach at three local events: a <i>Robot Block Party</i> at Chicago's Museum of Science and Industry, a <i>Career Day for Girls</i> in the Chicago area, and a <i>Biotech Nexus</i> event, attended by high-schoolers from Lindblom Math and Science Academy!</p>
 

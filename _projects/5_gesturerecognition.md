@@ -23,7 +23,7 @@ Two different 3DCNNs, used for classifying video rather than a 2DCNN which is us
 Here, these networks (principally C3D) were used to emulate the results in a <a href="https://research.nvidia.com/sites/default/files/pubs/2016-06_Online-Detection-and/NVIDIA_R3DCNN_cvpr2016.pdf" target="_blank"><u>2016 paper by NVIDIA</u></a> to classify gestures in the nvGesture dataset, a dataset with 25 loosely segmented classes of gestures over 1050 videos. The spatiotemporal features from the neural networks were then inputted into a LSTM layer before classification. As shown below, implementing the networks from literature yielded training results were not as expected, this was still a great introduction to Pytorch by attempting to solve a difficult problem. </p> <br>
 
 ![Tensorboard results for experiments on the nvGesture dataset](/assets/img/projects/gesture/tensorboard.png)
-<center><h2>Tensorboard results for experiments on the nvGesture dataset</h2></center>
+<div class="caption">Tensorboard results for experiments on the nvGesture dataset</div>
 
 
 ### 1D Parallelized Convolutional Neural Network <br>
@@ -38,7 +38,7 @@ Finally, a dataset of static images of hands in an infrared camera was used to c
 </p> <br>
 
 ![An infrared image from the dataset](/assets/img/projects/gesture/fist_gesture.png)
-<center><h2>An infrared image from the dataset</h2></center>
+<div class="caption">An infrared image from the dataset</div>
 
 
 ### Controlling the Drone

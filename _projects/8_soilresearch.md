@@ -21,7 +21,7 @@ related_publications: false
 <br>
 
 ![A picture of a vacuum chamber for testing. Voltage-controlled valve is out-of-frame.](/assets/img/projects/soil.jpg)
-<center><h2>A picture of a vacuum chamber for testing. Voltage-controlled valve is out-of-frame.</h2></center>
+<div class="caption">A picture of a vacuum chamber for testing. Voltage-controlled valve is out-of-frame.</div>
 
 {% include video.liquid path="https://www.youtube.com/embed/k6XsQc-nGOI" class="img-fluid rounded z-depth-1" %}
-<center><h2>Video feed after background subtraction is overlaid over the system. A cropped field of view is used for increased detection accuracy.</h2></center>
+<div class="caption">Video feed after background subtraction is overlaid over the system. A cropped field of view is used for increased detection accuracy.</div>
