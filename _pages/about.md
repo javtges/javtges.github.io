@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: James Avtges Portfolio
+subtitle: Roboticist, Maker, Ph.D. Student at Northwestern University
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Portfolio & project write-ups</p>
+    <p>Northwestern University</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -25,6 +25,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I'm James. This site is a collection of the projects I've worked on, from web development to robotics.
+Roboticist, Maker, M.S. in Robotics and current Ph.D. student at Northwestern University. My work focuses on robot learning for soft robots!
 
-Take a look at the [projects](/projects/) page for a growing list of things I've built, including a ROS-based robotic pancake chef and a Jekyll-powered web project. Feel free to reach out via email if you'd like to get in touch.
+Take a look at the [projects](/projects/) page for a growing list of things I've built and researched, from soft robotics and reinforcement learning to computer vision and manipulation. Feel free to reach out via email if you'd like to get in touch.

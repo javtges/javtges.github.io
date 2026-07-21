@@ -9,11 +9,11 @@ last_name: Avtges
 contact_note: >
   Email is the best way to reach me.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  James Avtges Portfolio
+  Roboticist, Maker, M.S. in Robotics and current Ph.D. student at Northwestern University. My work focuses on robot learning for soft robots!
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Pineapple, Pineapple Pizza, Pineapple House, Robotics, Portfolio # add your own keywords or leave empty
+keywords: ROS, Robotics, Perception # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🍍 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
