@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: Roboticist, Maker, Ph.D. Student at Northwestern University
+subtitle: Roboticist, Maker, Ph.D. Candidate at Northwestern University
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Northwestern University</p>
+  # more_info: >
+  #   <p>Northwestern University</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -25,6 +25,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Roboticist, Maker, M.S. in Robotics and current Ph.D. student at Northwestern University. My work focuses on robot learning for soft robots!
+I'm James, a Ph.D. candidate in Mechanical Engineering and NDSEG Fellow at [Northwestern University](https://robotics.northwestern.edu), advised by [Prof. Todd Murphey](https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/murphey-todd.html). My work focuses on the interactions between mechanical agents and machine learning properties. My research interests also include real-world active learning, tactile sensing, dexterous manipulation, and soft robots.
 
-Take a look at the [projects](/projects/) page for a growing list of things I've built and researched, from soft robotics and reinforcement learning to computer vision and manipulation. Feel free to reach out via email if you'd like to get in touch.
+Previously, I completed my MS in Robotics at NU under [Prof. Ryan Truby](https://sites.northwestern.edu/roboticmatterlab/), and worked for [NASA JPL](https://www.jpl.nasa.gov) on multiple projects, including [Deep Space Optical Communications](https://www.jpl.nasa.gov/missions/deep-space-optical-communications-dsoc/) which launched in 2023.
+
+I can be reached at javtges (dot) u (dot) northwestern edu!
